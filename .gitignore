@@ -12,6 +12,7 @@ override.tf.json
 *_override.tf
 *_override.tf.json
 .terraformrc
+.terraform.lock.hcl
 terraform.rc
 *.tfvars.local
 *.auto.tfvars.local
@@ -34,3 +35,12 @@ service-account*.json
 .idea/
 .vscode/
 *.swp
+
+# Architecture diagrams — keep locally, never push to remote
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.svg
+runbook_commands
+someCommands
