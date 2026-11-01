@@ -1,0 +1,12 @@
+prefix             = "demo"
+cost_center        = "platform"
+private_dns_domain = "gcp.internal."
+
+hub_subnets = [
+  {
+    name          = "hub-shared-us-west2"
+    region        = "us-west2"
+    ip_cidr_range = "10.0.0.0/24"
+    description   = "Hub shared services"
+  },
+]

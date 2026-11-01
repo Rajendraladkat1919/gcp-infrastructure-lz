@@ -1,0 +1,26 @@
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directories: ["/", "/.github/actions/*"]
+    schedule:
+      interval: weekly
+    commit-message:
+      prefix: "ci"
+    groups:
+      actions:
+        patterns: ["*"]
+  - package-ecosystem: terraform
+    directories:
+      - "/net-core-hub"
+      - "/net-shared-non-prod"
+      - "/net-shared-prod"
+    schedule:
+      interval: weekly
+    commit-message:
+      prefix: "chore"
+  - package-ecosystem: pre-commit
+    directory: "/"
+    schedule:
+      interval: weekly
+    commit-message:
+      prefix: "chore"

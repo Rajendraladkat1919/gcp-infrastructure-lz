@@ -1,0 +1,28 @@
+prefix                 = "demo"
+cost_center            = "platform"
+private_dns_domain     = "gcp.internal."
+bootstrap_state_bucket = "demo-pr-tfstate-bootstrap"
+lz_state_bucket        = "demo-pr-tfstate-lz"
+
+environment_supernet        = "10.32.0.0/12"
+other_environment_supernets = ["10.16.0.0/12"] # prod supernet
+
+subnets = [
+  {
+    name          = "nonprod-workloads-us-west2"
+    region        = "us-west2"
+    ip_cidr_range = "10.32.0.0/20"
+    description   = "Non-prod workloads"
+  },
+]
+
+proxy_only_subnets = [
+  {
+    name          = "nonprod-proxy-us-west2"
+    region        = "us-west2"
+    ip_cidr_range = "10.32.16.0/23"
+    description   = "Non-prod regional proxy-only subnet"
+  },
+]
+
+psa_range = "10.32.32.0/20"

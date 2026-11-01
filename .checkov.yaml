@@ -1,0 +1,12 @@
+framework:
+  - terraform
+  - github_actions
+  - secrets
+quiet: true
+compact: true
+download-external-modules: false
+skip-path:
+  - ".terraform/"
+# Every skip needs a written justification, see docs/controls.md ("Exceptions").
+# CKV_TF_1 (module SHA pinning) is no longer skipped — all modules reference
+# github.com/GoogleCloudPlatform/cloud-foundation-fabric at an immutable commit SHA.

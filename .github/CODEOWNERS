@@ -1,0 +1,9 @@
+# ORG and team names are placeholders, run `make set-org ORG=<github-org>` to replace them.
+* @ORG/cloud-platform
+
+# Identity, IAM and policy changes need security review as well.
+/1-network-hub/ @ORG/cloud-platform @ORG/security
+/2-network-spokes/ @ORG/cloud-platform @ORG/security
+/.github/ @ORG/cloud-platform @ORG/security
+/.pre-commit-config.yaml @ORG/cloud-platform @ORG/security
+/scripts/ @ORG/cloud-platform @ORG/security
